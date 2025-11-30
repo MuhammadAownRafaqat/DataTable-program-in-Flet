@@ -37,13 +37,13 @@ def acoolfunction(page: ft.Page):
     def check_fields():
         
         if firsttextfieldvalue and secondtextfieldvalue:
-            show_data_entry_form_and_table()
+            show_data_table()
         else:
             
             page.add(ft.SnackBar(content=ft.Text(value="Please enter both username and password")))
             page.update()
 
-    def show_data_entry_form_and_table():
+    def show_data_table():
         
         thetextfield = ft.TextField(label="Enter Name, Age and Profession", on_submit=lambda _: submitthedataforrow())
         page.add(thetextfield)
